@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "name": "tag"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "tag": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 256
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "tag",
+      "required": true,
+      "maxLength": 256
+    },
+    "featured": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "order": {
+      "type": "integer"
+    },
+    "posts": {
+      "via": "tag",
+      "collection": "post"
+    }
+  }
+}

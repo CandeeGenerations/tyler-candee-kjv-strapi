@@ -36,9 +36,6 @@
       "plugin": "upload",
       "required": true
     },
-    "social": {
-      "type": "string"
-    },
     "featured": {
       "type": "boolean",
       "default": true,
@@ -47,6 +44,11 @@
     "posts": {
       "collection": "post",
       "via": "author"
+    },
+    "social": {
+      "type": "component",
+      "repeatable": false,
+      "component": "metadata.social-networks"
     }
   }
 }

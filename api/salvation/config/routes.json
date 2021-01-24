@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/salvation",
+      "handler": "salvation.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/salvation",
+      "handler": "salvation.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/salvation",
+      "handler": "salvation.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/tagSlugs",
+      "handler": "tag.findSlugs",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/tags/count",
       "handler": "tag.count",
       "config": {

@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/authorSlugs",
+      "handler": "author.findSlugs",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/authors/count",
       "handler": "author.count",
       "config": {

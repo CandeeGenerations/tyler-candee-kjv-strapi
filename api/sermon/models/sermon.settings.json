@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sermons",
+  "info": {
+    "name": "Sermon",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "hero": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "code": {
+      "type": "uid",
+      "required": true
+    }
+  }
+}

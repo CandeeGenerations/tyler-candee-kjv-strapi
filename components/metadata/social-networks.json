@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_metadata_social_networks",
+  "info": {
+    "name": "Social Networks",
+    "icon": "network-wired"
+  },
+  "options": {},
+  "attributes": {
+    "facebook": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "youtube": {
+      "type": "string"
+    }
+  }
+}

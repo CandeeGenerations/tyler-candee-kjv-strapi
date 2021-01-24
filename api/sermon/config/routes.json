@@ -2,56 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/posts",
-      "handler": "post.find",
+      "path": "/sermons",
+      "handler": "sermon.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/posts/count",
-      "handler": "post.count",
+      "path": "/sermons/count",
+      "handler": "sermon.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/posts/:id/next",
-      "handler": "post.nextPosts",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/posts/:id",
-      "handler": "post.findOne",
+      "path": "/sermons/:id",
+      "handler": "sermon.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/posts",
-      "handler": "post.create",
+      "path": "/sermons",
+      "handler": "sermon.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/posts/:id",
-      "handler": "post.update",
+      "path": "/sermons/:id",
+      "handler": "sermon.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/posts/:id",
-      "handler": "post.delete",
+      "path": "/sermons/:id",
+      "handler": "sermon.delete",
       "config": {
         "policies": []
       }

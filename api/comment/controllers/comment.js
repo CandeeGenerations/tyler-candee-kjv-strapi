@@ -8,12 +8,12 @@ const {sanitizeEntity} = require('strapi-utils')
  */
 
 module.exports = {
-  async nextPosts(ctx) {
-    const {id} = ctx.params
-    const entities = await strapi.services.post.nextPosts(id)
+  async findByPost(ctx) {
+    const {_postId, ...params} = ctx.params
+    const entities = await strapi.services.comment.findByPost(_postId, params)
 
     return entities.map((entity) =>
-      sanitizeEntity(entity, {model: strapi.models.post}),
+      sanitizeEntity(entity, {model: strapi.models.comment}),
     )
   },
 }

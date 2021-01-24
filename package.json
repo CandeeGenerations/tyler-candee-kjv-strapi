@@ -11,6 +11,8 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "lodash": "^4.17.20",
+    "prettier": "^2.2.1",
     "strapi": "3.4.1",
     "strapi-admin": "3.4.1",
     "strapi-connector-mongoose": "3.4.1",

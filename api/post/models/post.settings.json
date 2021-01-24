@@ -57,6 +57,10 @@
     "tag": {
       "model": "tag",
       "via": "posts"
+    },
+    "comments": {
+      "via": "post",
+      "collection": "comment"
     }
   }
 }

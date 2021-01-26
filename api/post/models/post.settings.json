@@ -55,8 +55,8 @@
       "maxLength": 50000
     },
     "tags": {
-      "collection": "tag",
       "via": "posts",
+      "collection": "tag",
       "dominant": true
     },
     "comments": {

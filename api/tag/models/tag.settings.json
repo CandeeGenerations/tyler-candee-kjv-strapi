@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "tags",
   "info": {
-    "name": "tag"
+    "name": "tag",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -24,15 +25,15 @@
     },
     "featured": {
       "type": "boolean",
-      "default": true,
+      "default": false,
       "required": true
     },
     "order": {
       "type": "integer"
     },
     "posts": {
-      "via": "tags",
-      "collection": "post"
+      "collection": "post",
+      "via": "tags"
     }
   }
 }

@@ -41,6 +41,14 @@
       }
     },
     {
+      "method": "POST",
+      "path": "/posts/copy-tags",
+      "handler": "post.copyTags",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "PUT",
       "path": "/posts/:id",
       "handler": "post.update",

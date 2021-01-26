@@ -31,8 +31,8 @@
       "model": "comment"
     },
     "post": {
-      "model": "post",
-      "via": "comments"
+      "via": "comments",
+      "model": "post"
     }
   }
 }

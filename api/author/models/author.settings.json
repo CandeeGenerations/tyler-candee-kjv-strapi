@@ -42,8 +42,8 @@
       "required": true
     },
     "posts": {
-      "collection": "post",
-      "via": "author"
+      "via": "author",
+      "collection": "post"
     },
     "social": {
       "type": "component",

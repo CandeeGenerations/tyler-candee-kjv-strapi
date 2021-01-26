@@ -28,8 +28,8 @@
       "required": true
     },
     "author": {
-      "via": "posts",
-      "model": "author"
+      "model": "author",
+      "via": "posts"
     },
     "date": {
       "type": "datetime",
@@ -54,13 +54,14 @@
       "required": true,
       "maxLength": 50000
     },
-    "tag": {
-      "model": "tag",
-      "via": "posts"
+    "tags": {
+      "collection": "tag",
+      "via": "posts",
+      "dominant": true
     },
     "comments": {
-      "via": "post",
-      "collection": "comment"
+      "collection": "comment",
+      "via": "post"
     }
   }
 }

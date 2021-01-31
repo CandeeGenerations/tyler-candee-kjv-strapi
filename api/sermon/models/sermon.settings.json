@@ -31,6 +31,15 @@
     "code": {
       "type": "uid",
       "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Sermon",
+        "Devotional"
+      ],
+      "default": "Devotional",
+      "required": true
     }
   }
 }

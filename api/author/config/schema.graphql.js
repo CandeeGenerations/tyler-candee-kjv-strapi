@@ -1,9 +1,12 @@
 module.exports = {
   definition: `
     type SlugResponse {
-      id: ID
-      slug: String
-      postCount: Int
+      id: ID!
+      tag: String!
+      slug: String!
+      featured: Boolean!
+      order: Int
+      postCount: Int!
     }
   `,
   query: `

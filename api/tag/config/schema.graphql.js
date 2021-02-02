@@ -1,6 +1,6 @@
 module.exports = {
   query: `
-    tagSlugs(publicationState: PublicationState): [SlugResponse]
+    tagSlugs(sort: String): [SlugResponse]
   `,
   resolver: {
     Query: {

@@ -15,8 +15,7 @@ module.exports = {
       const sEntity = sanitizeEntity(entity, {model: strapi.models.tag})
 
       return {
-        id: sEntity.id,
-        slug: sEntity.slug,
+        ...sEntity,
         postCount: sEntity.posts.length,
       }
     })

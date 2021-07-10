@@ -26,6 +26,11 @@ jobs:
         with:
           envkey_DATABASE_URI: ${{ secrets.DATABASE_URI }}
           envkey_DATABASE_SSL: "true"
+          envkey_STORAGE_ACCOUNT: ${{ secrets.STORAGE_ACCOUNT }}
+          envkey_STORAGE_ACCOUNT_KEY: ${{ secrets.STORAGE_ACCOUNT_KEY }}
+          envkey_STORAGE_URL: ${{ secrets.STORAGE_URL }}
+          envkey_STORAGE_CONTAINER_NAME: ${{ secrets.STORAGE_CONTAINER_NAME }}
+          envkey_STORAGE_CDN_URL: ${{ secrets.STORAGE_CDN_URL }}
           file_name: .env
 
       - run: |

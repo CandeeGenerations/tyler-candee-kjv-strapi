@@ -5,7 +5,13 @@ jobs:
   build-and-deploy-server:
     runs-on: ubuntu-latest
     steps:
-      # checkout the repo
+      - name: Start Slack Notification
+        uses: bryannice/gitactions-slack-notification@2.0.0
+        env:
+          SLACK_INCOMING_WEBHOOK: ${{ secrets.SLACK_INCOMING_WEBHOOK }}
+          SLACK_MESSAGE: '`${{ secrets.PROJECT_NAME }}:${{ github.sha }}`'
+          SLACK_TITLE: 'Starting Deployment'
+
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@main
 
@@ -34,14 +40,21 @@ jobs:
           file_name: .env
 
       - run: |
-          docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/kjvstrapi:${{ github.sha }}
-          docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/kjvstrapi:${{ github.sha }}
+          docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.CONTAINER_NAME }}:${{ github.sha }}
+          docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.CONTAINER_NAME }}:${{ github.sha }}
 
       - uses: azure/webapps-deploy@v2
         with:
-          app-name: 'kjv-strapi'
-          images: ${{ secrets.REGISTRY_LOGIN_SERVER }}/kjvstrapi:${{ github.sha }}
+          app-name: ${{ secrets.APP_NAME }}
+          images: ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.CONTAINER_NAME }}:${{ github.sha }}
 
       - name: Azure logout
         run: |
           az logout
+
+      - name: End Slack Notification
+        uses: bryannice/gitactions-slack-notification@2.0.0
+        env:
+          SLACK_INCOMING_WEBHOOK: ${{ secrets.SLACK_INCOMING_WEBHOOK }}
+          SLACK_MESSAGE: '`${{ secrets.PROJECT_NAME }}:${{ github.sha }}`'
+          SLACK_TITLE: 'Deployment Complete!'

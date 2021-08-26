@@ -9,7 +9,7 @@ jobs:
         uses: bryannice/gitactions-slack-notification@2.0.0
         env:
           SLACK_INCOMING_WEBHOOK: ${{ secrets.SLACK_INCOMING_WEBHOOK }}
-          SLACK_MESSAGE: '`${{ secrets.PROJECT_NAME }}:${{ github.sha }}`'
+          SLACK_MESSAGE: '`${{ secrets.APP_NAME }}:${{ github.sha }}`'
           SLACK_TITLE: 'Starting Deployment'
 
       - name: 'Checkout GitHub Action'
@@ -56,5 +56,5 @@ jobs:
         uses: bryannice/gitactions-slack-notification@2.0.0
         env:
           SLACK_INCOMING_WEBHOOK: ${{ secrets.SLACK_INCOMING_WEBHOOK }}
-          SLACK_MESSAGE: '`${{ secrets.PROJECT_NAME }}:${{ github.sha }}`'
+          SLACK_MESSAGE: '`${{ secrets.APP_NAME }}:${{ github.sha }}`'
           SLACK_TITLE: 'Deployment Complete!'

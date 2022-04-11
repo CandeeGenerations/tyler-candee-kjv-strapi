@@ -14,8 +14,9 @@
     "standard-version": "^9.3.2"
   },
   "dependencies": {
+    "dayjs": "^1.11.0",
     "lodash": "^4.17.21",
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.2",
     "strapi": "^3.6.8",
     "strapi-admin": "^3.6.8",
     "strapi-connector-mongoose": "^3.6.8",
@@ -28,20 +29,21 @@
     "strapi-provider-upload-azure-storage": "^2.0.0",
     "strapi-utils": "^3.6.8"
   },
-  "peerDependencies": {
-    "nanoid": "^3.2.0",
-    "node-forge": "^1.2.1",
-    "follow-redirects": "^1.14.7",
-    "markdown-it": "^12.3.2",
-    "validator": "^13.7.0",
-    "strapi": "^3.6.8",
-    "url-parse": "^1.5.4",
-    "nth-check": "^2.0.1",
-    "axios": "^0.25.0",
+  "resolutions": {
+    "mquery": "^3.2.3",
+    "tar": "^6.1.7",
     "mpath": "^0.8.4",
-    "immer": "^9.0.12",
-    "object-path": "^0.11.8",
-    "tar": "^6.1.11"
+    "immer": "^9.0.6",
+    "node-fetch": "^2.6.7",
+    "glob-parent": "^5.1.2",
+    "node-forge": "^1.0.0",
+    "ansi-regex": "^3.0.1",
+    "moment": "^2.29.2",
+    "simple-get": "^3.1.1",
+    "follow-redirects": "^1.14.8",
+    "minimist": "^1.2.6",
+    "urijs": "^1.19.10",
+    "url-parse": "^1.5.6"
   },
   "strapi": {
     "uuid": "02fbc445-ae7f-4fcd-a3de-4d5ae3626520"

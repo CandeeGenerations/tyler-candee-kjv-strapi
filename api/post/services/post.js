@@ -2,6 +2,7 @@
 
 const {Types} = require('mongoose')
 const _ = require('lodash')
+const dayjs = require('dayjs')
 
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/concepts/services.html#core-services)
@@ -51,5 +52,14 @@ module.exports = {
 
     // return the next two posts
     return _.slice(allPosts, postIndex + 1, postIndex + 3)
+  },
+
+  async todaysPosts() {
+    return await strapi.query('post').search({
+      _sort: 'date:desc',
+      secret: false,
+      date_gt: dayjs().startOf('day').format(),
+      date_lt: dayjs().endOf('day').format(),
+    })
   },
 }

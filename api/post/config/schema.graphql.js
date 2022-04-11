@@ -2,6 +2,7 @@ module.exports = {
   query: `
     postsCount(where: JSON): Int!
     nextPosts(id: ID!): [Post]
+    todaysPosts: [Post]
   `,
   resolver: {
     Query: {
@@ -16,6 +17,11 @@ module.exports = {
       nextPosts: {
         description: 'Return the next 2 posts',
         resolver: 'application::post.post.nextPosts',
+      },
+
+      todaysPosts: {
+        description: "Return today's posts",
+        resolver: 'application::post.post.todaysPosts',
       },
     },
   },

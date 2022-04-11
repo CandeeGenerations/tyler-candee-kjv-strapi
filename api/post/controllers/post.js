@@ -18,6 +18,14 @@ module.exports = {
     )
   },
 
+  async todaysPosts(ctx) {
+    const entities = await strapi.services.post.todaysPosts()
+
+    return entities.map((entity) =>
+      sanitizeEntity(entity, {model: strapi.models.post}),
+    )
+  },
+
   async copyTags() {
     const entities = await strapi.services.post.find()
 

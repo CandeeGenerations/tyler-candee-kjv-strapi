@@ -58,6 +58,7 @@ module.exports = {
     return await strapi.query('post').search({
       _sort: 'date:desc',
       secret: false,
+      published_at_null: false,
       date_gt: dayjs().startOf('day').format(),
       date_lt: dayjs().endOf('day').format(),
     })

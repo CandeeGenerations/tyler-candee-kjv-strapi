@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/CandeeGenerations/tyler-candee-kjv-strapi/compare/v1.4.1...v1.4.2) (2022-04-26)
+
+
+### Bug Fixes
+
+* minor fix for posts ([fb5b7f9](https://github.com/CandeeGenerations/tyler-candee-kjv-strapi/commit/fb5b7f958b2c7bbde9d803b250fd0960d4500fe7))
+
 ### [1.4.1](https://github.com/CandeeGenerations/tyler-candee-kjv-strapi/compare/v1.4.0...v1.4.1) (2022-04-12)
 
 

@@ -1,4 +1,4 @@
-module.exports = ({ env }) => ({
+module.exports = ({env}) => ({
   upload: {
     provider: 'azure-storage',
     providerOptions: {
@@ -8,7 +8,17 @@ module.exports = ({ env }) => ({
       containerName: env('STORAGE_CONTAINER_NAME'),
       cdnBaseURL: env('STORAGE_CDN_URL'),
       defaultPath: 'assets',
-      maxConcurrent: 10
-    }
-  }
-});
+      maxConcurrent: 10,
+    },
+  },
+  graphql: {
+    endpoint: '/graphql',
+    shadowCRUD: true,
+    playgroundAlways: false,
+    depthLimit: 7,
+    amountLimit: 10000,
+    apolloServer: {
+      tracing: false,
+    },
+  },
+})

@@ -20,6 +20,7 @@ module.exports = {
     const allPosts = await strapi.query('post').search({
       _sort: 'date:desc',
       secret: false,
+      published_at_null: false,
       author: {_id: Types.ObjectId(post.author._id)},
     })
     const postsLength = allPosts.length

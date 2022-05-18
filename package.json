@@ -17,7 +17,7 @@
     "dayjs": "^1.11.0",
     "lodash": "^4.17.21",
     "prettier": "^2.6.2",
-    "strapi": "^3.6.8",
+    "strapi": "^3.6.10",
     "strapi-admin": "^3.6.8",
     "strapi-connector-mongoose": "^3.6.8",
     "strapi-plugin-content-manager": "^3.6.8",

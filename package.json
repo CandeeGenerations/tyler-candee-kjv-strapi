@@ -11,23 +11,23 @@
     "release": "standard-version -a -- --release-as minor"
   },
   "devDependencies": {
-    "standard-version": "^9.3.2"
+    "standard-version": "^9.5.0"
   },
   "dependencies": {
-    "dayjs": "^1.11.0",
+    "dayjs": "^1.11.3",
     "lodash": "^4.17.21",
-    "prettier": "^2.6.2",
-    "strapi": "^3.6.8",
-    "strapi-admin": "^3.6.8",
-    "strapi-connector-mongoose": "^3.6.8",
-    "strapi-plugin-content-manager": "^3.6.8",
-    "strapi-plugin-content-type-builder": "^3.6.8",
-    "strapi-plugin-email": "^3.6.8",
-    "strapi-plugin-graphql": "^3.6.8",
-    "strapi-plugin-upload": "^3.6.8",
-    "strapi-plugin-users-permissions": "^3.6.8",
-    "strapi-provider-upload-azure-storage": "^2.0.0",
-    "strapi-utils": "^3.6.8"
+    "prettier": "^2.7.1",
+    "strapi": "^3.6.10",
+    "strapi-admin": "^3.6.10",
+    "strapi-connector-mongoose": "^3.6.10",
+    "strapi-plugin-content-manager": "^3.6.10",
+    "strapi-plugin-content-type-builder": "^3.6.10",
+    "strapi-plugin-email": "^3.6.10",
+    "strapi-plugin-graphql": "^3.6.10",
+    "strapi-plugin-upload": "^3.6.10",
+    "strapi-plugin-users-permissions": "^3.6.10",
+    "strapi-provider-upload-azure-storage": "^2.1.0",
+    "strapi-utils": "^3.6.10"
   },
   "resolutions": {
     "mquery": "^3.2.3",
@@ -43,7 +43,13 @@
     "follow-redirects": "^1.14.8",
     "minimist": "^1.2.6",
     "urijs": "^1.19.10",
-    "url-parse": "^1.5.6"
+    "url-parse": "^1.5.6",
+    "eventsource": "^1.1.1",
+    "async": "^2.6.4",
+    "sharp": "^0.30.5",
+    "got": "^11.8.5",
+    "parse-path": "^5.0.0",
+    "passport": "^0.6.0"
   },
   "strapi": {
     "uuid": "02fbc445-ae7f-4fcd-a3de-4d5ae3626520"
